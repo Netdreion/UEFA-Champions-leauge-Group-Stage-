@@ -1,50 +1,42 @@
-import React from "react";
+import { useState } from "react";
 import data from "../data";
 
-const Pots = () => {
-  const handleDaw = (team) => {
-    team(Math.floor(Math.random) * data.pot1.length);
-  };
+const GroupDraws = () => {
   return (
     <div className="Container">
-      <div className="Pot">
-        <h2>Pot 1</h2>
+      <div className="Pot1">
+        <h2>pot</h2>
         <ul>
           {data.pot1.map((team, index) => {
             return <li key={index}>{team}</li>;
           })}
         </ul>
       </div>
-      <button onClick={handleDaw}>DRAW</button>
-      <div className="Pot">
-        <h2>Pot 2</h2>
+      <div className="Pot2">
+        <h2>pot2</h2>
         <ul>
           {data.pot2.map((team, index) => {
             return <li key={index}>{team}</li>;
           })}
         </ul>
       </div>
-      <button>DRAW</button>
-      <div className="Pot">
-        <h2>Pot 3</h2>
+      <div className="Pot1">
+        <h2>pot3</h2>
         <ul>
           {data.pot3.map((team, index) => {
             return <li key={index}>{team}</li>;
           })}
         </ul>
       </div>
-      <button>DRAW</button>
-      <div className="Pot">
-        <h2>Pot 4</h2>
+      <div className="Pot4">
+        <h2>pot4</h2>
         <ul>
           {data.pot4.map((team, index) => {
             return <li key={index}>{team}</li>;
           })}
         </ul>
       </div>
-      <button>DRAW</button>
     </div>
   );
 };
-
-export default Pots;
+export default groupDraws;
