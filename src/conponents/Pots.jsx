@@ -2,9 +2,6 @@ import React from "react";
 import data from "../data";
 
 const Pots = () => {
-  const handleDaw = (team) => {
-    team(Math.floor(Math.random) * data.pot1.length);
-  };
   return (
     <div className="Container">
       <div className="Pot">
@@ -15,7 +12,7 @@ const Pots = () => {
           })}
         </ul>
       </div>
-      <button onClick={handleDaw}>DRAW</button>
+
       <div className="Pot">
         <h2>Pot 2</h2>
         <ul>
@@ -24,7 +21,7 @@ const Pots = () => {
           })}
         </ul>
       </div>
-      <button>DRAW</button>
+
       <div className="Pot">
         <h2>Pot 3</h2>
         <ul>
@@ -42,7 +39,6 @@ const Pots = () => {
           })}
         </ul>
       </div>
-      <button>DRAW</button>
     </div>
   );
 };

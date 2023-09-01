@@ -1,13 +1,13 @@
 import { useState } from "react";
 import data from "../data";
 
-const GroupDraws = () => {
+const GroupDraws = ({ pot1Draw }) => {
   return (
     <div>
       <div>
         <h2>group A</h2>
         <ul>
-          <li></li>
+          <li>{pot1Draw}</li>
           <li></li>
           <li></li>
           <li></li>
