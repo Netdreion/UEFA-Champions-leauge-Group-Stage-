@@ -5,13 +5,13 @@ import GroupDraws from "./conponents/Groups";
 import "./App.css";
 
 function App() {
-  const draw = () => {
+  const pot1Draw = () => {
     const pot1Draws = data.pot1(Math.floor(Math.random) * data.pot1.lenght);
   };
   return (
     <>
       <Pots />
-      <GroupDraws />
+      <GroupDraws pot1Draw={pot1Draw} />
     </>
   );
 }
