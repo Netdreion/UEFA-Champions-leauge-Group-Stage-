@@ -1,17 +1,13 @@
 import { useState } from "react";
 import data from "../data";
 
-const GroupDraws = ({ pot1Draw }) => {
+const GroupDraws = () => {
   return (
     <div>
       <button onClick={pot1Draw}></button>
       <div>
         <h2>group A</h2>
-        <ul>
-          {pot1Draw.map((team, index) => {
-            return <li key={index}>{team}</li>;
-          })}
-        </ul>
+        <ul></ul>
       </div>
       <div>
         <h2>group B</h2>
