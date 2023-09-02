@@ -1,10 +1,10 @@
 import { useState } from "react";
 import data from "../data";
 
-const GroupDraws = () => {
+const GroupDraws = ({ handleClick, group }) => {
   return (
     <div>
-      <button onClick={pot1Draw}></button>
+      <button onClick={() => handleClick()}></button>
       <div>
         <h2>group A</h2>
         <ul></ul>
@@ -12,7 +12,7 @@ const GroupDraws = () => {
       <div>
         <h2>group B</h2>
         <ul>
-          <li></li>
+          <li>{group}</li>
           <li></li>
           <li></li>
           <li></li>

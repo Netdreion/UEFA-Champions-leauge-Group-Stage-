@@ -10,13 +10,25 @@ function App() {
     groupB: [],
     groupC: [],
     groupD: [],
+    groupE: [],
+    groupF: [],
+    groupG: [],
+    groupH: [],
   });
   const [team, setTeam] = useState("");
+
+  const handleClick = () => {
+    const draw1 = data.pot1.map((team, index) =>
+      team(Math.floor(Math.random) * data.pot1.length)
+    );
+    setTeam(draw1);
+    setGroup(team);
+  };
 
   return (
     <>
       <Pots />
-      <GroupDraws />
+      <GroupDraws handleClick={handleClick} group={group} />
     </>
   );
 }
