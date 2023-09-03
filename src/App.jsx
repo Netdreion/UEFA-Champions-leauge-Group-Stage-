@@ -21,8 +21,8 @@ function App() {
     const draw1 = data.pot1.map((team, index) =>
       team(Math.floor(Math.random) * data.pot1.length)
     );
-    setTeam(draw1);
-    setGroup(team);
+    const randomTeam = data.pot1[draw1];
+    setTeam(randomTeam);
   };
 
   return (
