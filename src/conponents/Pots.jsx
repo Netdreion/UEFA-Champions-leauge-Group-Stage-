@@ -30,7 +30,7 @@ const Pots = () => {
           })}
         </ul>
       </div>
-      <button>DRAW</button>
+
       <div className="Pot">
         <h2>Pot 4</h2>
         <ul>
@@ -39,6 +39,7 @@ const Pots = () => {
           })}
         </ul>
       </div>
+      <button onClick={drawTeams}>Draw</button>
     </div>
   );
 };
