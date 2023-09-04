@@ -1,34 +1,41 @@
-import { useState } from "react";
+import React, { useState } from "react";
+import Pots from "./components/Pots";
+import GroupDraws from "./components/Groups";
 import data from "./data";
-import Pots from "./conponents/Pots";
-import GroupDraws from "./conponents/Groups";
 import "./App.css";
 
 function App() {
-  const [group, setGroup] = useState({
+  const [groups, setGroups] = useState({
     groupA: [],
     groupB: [],
     groupC: [],
     groupD: [],
     groupE: [],
     groupF: [],
-    groupG: [],
     groupH: [],
+    groupI: [],
   });
-  const [team, setTeam] = useState("");
 
-  const handleClick = () => {
-    const draw1 = data.pot1.map((team, index) =>
-      team(Math.floor(Math.random) * data.pot1.length)
-    );
-    const randomTeam = data.pot1[draw1];
-    setTeam(randomTeam);
+  const drawTeams = () => {
+    // Create a copy of pots to work with
+    const pots = { ...data };
+
+    for (const group in groups) {
+      for (const pot in pots) {
+        const randomIndex = Math.floor(Math.random() * pots[pot].length);
+        const drawnTeam = pots[pot].splice(randomIndex, 1)[0];
+        setGroups((prevGroups) => ({
+          ...prevGroups,
+          [group]: [...prevGroups[group], drawnTeam],
+        }));
+      }
+    }
   };
 
   return (
     <>
-      <Pots />
-      <GroupDraws handleClick={handleClick} group={group} />
+      <Pots drawTeams={drawTeams} />
+      <GroupDraws groups={groups} />
     </>
   );
 }
