@@ -1,7 +1,7 @@
 import React from "react";
 import data from "../data";
 
-const Pots = () => {
+const Pots = ({ drawTeams }) => {
   return (
     <div className="Container">
       <div className="Pot">
