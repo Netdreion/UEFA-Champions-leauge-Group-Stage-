@@ -31,3 +31,39 @@ ul {
 li {
   margin-bottom: 5px;
 }
+/* GroupDraws.css */
+
+/* Container for all groups */
+.group-draws-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Individual group styles */
+.group {
+  width: 48%;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box; /* Ensure padding and border don't increase width */
+}
+
+/* Group title styles */
+.group-title {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Team list styles */
+.team-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Individual team styles */
+.team {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
