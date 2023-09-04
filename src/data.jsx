@@ -25,6 +25,9 @@ const data = {
     "AC Milan",
     "Lazio",
     "Red Star Belgrade",
+    "Braga",
+    "PSV Eindhoven",
+    "Cogenhagen",
   ],
   pot4: [
     "Young Boys",
