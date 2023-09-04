@@ -1,10 +1,9 @@
 import { useState } from "react";
 import data from "../data";
 
-const GroupDraws = ({ handleClick, group }) => {
+const GroupDraws = ({ group }) => {
   return (
     <div>
-      <button onClick={() => handleClick()}></button>
       <div>
         <h2>group A</h2>
         <ul></ul>
