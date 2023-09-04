@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Pots from "./components/Pots";
-import GroupDraws from "./components/Groups";
+import Pots from "./conponents/Pots";
+import GroupDraws from "./conponents/Groups";
 import data from "./data";
 import "./App.css";
 
@@ -12,8 +12,8 @@ function App() {
     groupD: [],
     groupE: [],
     groupF: [],
+    groupG: [],
     groupH: [],
-    groupI: [],
   });
 
   const drawTeams = () => {
