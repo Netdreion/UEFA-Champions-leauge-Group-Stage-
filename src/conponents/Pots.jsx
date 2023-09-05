@@ -39,7 +39,19 @@ const Pots = ({ drawTeams }) => {
           })}
         </ul>
       </div>
-      <button onClick={drawTeams}>Draw</button>
+      <button
+        onClick={drawTeams}
+        style={{
+          backgroundColor: "#007bff",
+          color: "white",
+          padding: "10px 20px",
+          borderRadius: "5px",
+          border: "none",
+          cursor: "pointer",
+        }}
+      >
+        Draw
+      </button>
     </div>
   );
 };
