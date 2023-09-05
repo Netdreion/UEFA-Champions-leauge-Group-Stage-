@@ -1,7 +1,7 @@
 import React from "react";
 import data from "../data";
 
-const Pots = ({ drawTeams, setGroups }) => {
+const Pots = ({ drawTeams }) => {
   return (
     <div className="Container">
       <div className="Pot">
@@ -40,7 +40,6 @@ const Pots = ({ drawTeams, setGroups }) => {
         </ul>
       </div>
       <button onClick={drawTeams}>Draw</button>
-      <button onClick={() => setGroups([])}>ReDRAW</button>
     </div>
   );
 };
