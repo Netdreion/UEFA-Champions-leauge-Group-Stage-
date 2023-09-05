@@ -17,7 +17,6 @@ function App() {
   });
 
   const drawTeams = () => {
-    // Create a copy of pots to work with
     const pots = { ...data };
 
     for (const group in groups) {
@@ -30,6 +29,7 @@ function App() {
         }));
       }
     }
+    setGroups([]);
   };
 
   return (
