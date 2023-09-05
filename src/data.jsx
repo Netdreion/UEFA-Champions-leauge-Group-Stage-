@@ -32,10 +32,10 @@ const data = {
   pot4: [
     "Young Boys",
     "Galatasaray",
-    "Braga",
+    "Newcastle United",
     "Antwerp",
-    "Copenhagen",
-    "PSV",
+    "Celtic Glasgow",
+    "Real Sociedad",
     "Union Berlin",
     "Lens",
   ],
