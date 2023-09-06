@@ -26,7 +26,7 @@ function App() {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormField({
-      ...FormField,
+      ...formField,
       [name]: value,
     });
   };
@@ -50,7 +50,7 @@ function App() {
     <>
       <Pots drawTeams={drawTeams} />
       <GroupDraws groups={groups} />
-      <FormField />
+      <FormField handleChange={handleChange} formField={formField} />
     </>
   );
 }

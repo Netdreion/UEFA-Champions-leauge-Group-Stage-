@@ -1,19 +1,43 @@
 import React from "react";
-const FormField = () => {
+const FormField = ({ formField, handleChange }) => {
   return (
     <div>
       <form>
         <div>
           <h3>particepent</h3>
-          <input value={text} name={name} type="text" placeholder="your Name"></input>
+          <input
+            value={FormField.name}
+            name={name}
+            type="text"
+            placeholder="your Name"
+            onChange={handleChange}
+          ></input>
         </div>
         <div>
           <h3> who would be the star of the tournument</h3>
-          <input value={text} name={star} type="text" placeholder="star of the tournament"></input>
+          <input
+            value={FormField.star}
+            name={star}
+            type="text"
+            placeholder="star of the tournament"
+            onChange={handleChange}
+          ></input>
           <h3> who would be the top scorer</h3>
-          <input value={text} name={goalKing} type="text" placeholder="Goal King"></input>
+          <input
+            value={FormField.goalKing}
+            name={goalKing}
+            type="text"
+            placeholder="Goal King"
+            onChange={handleChange}
+          ></input>
           <h3> who would be the top assister </h3>
-          <input value={} name={assitDemon} type="text" placeholder="assits demon"></input>
+          <input
+            value={FormField.assistDemon}
+            name={assistDemon}
+            type="text"
+            placeholder="assits demon"
+            onChange={handleChange}
+          ></input>
         </div>
       </form>
     </div>
