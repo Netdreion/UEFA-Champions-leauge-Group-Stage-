@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Pots from "./conponents/Pots";
 import GroupDraws from "./conponents/Groups";
-import FormField from "./Form";
+import FormField from "./conponents/Form";
 import data from "./data";
 import "./App.css";
 
@@ -15,6 +15,13 @@ function App() {
     groupF: [],
     groupG: [],
     groupH: [],
+  });
+
+  const [formField, setFormField] = useState({
+    name: "",
+    star: "",
+    goalKing: "",
+    assistDemon: "",
   });
 
   const drawTeams = () => {
