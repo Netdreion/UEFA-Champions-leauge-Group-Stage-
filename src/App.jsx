@@ -23,6 +23,13 @@ function App() {
     goalKing: "",
     assistDemon: "",
   });
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormField({
+      ...FormField,
+      [name]: value,
+    });
+  };
 
   const drawTeams = () => {
     const pots = { ...data };
