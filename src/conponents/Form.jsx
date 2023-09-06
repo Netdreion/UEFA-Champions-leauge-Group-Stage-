@@ -6,8 +6,8 @@ const FormField = ({ formField, handleChange }) => {
         <div>
           <h3>particepent</h3>
           <input
-            value={FormField.name}
-            name={name}
+            value={formField.name}
+            name="name"
             type="text"
             placeholder="your Name"
             onChange={handleChange}
@@ -16,24 +16,24 @@ const FormField = ({ formField, handleChange }) => {
         <div>
           <h3> who would be the star of the tournument</h3>
           <input
-            value={FormField.star}
-            name={star}
+            value={formField.star}
+            name="star"
             type="text"
             placeholder="star of the tournament"
             onChange={handleChange}
           ></input>
           <h3> who would be the top scorer</h3>
           <input
-            value={FormField.goalKing}
-            name={goalKing}
+            value={formField.goalKing}
+            name="goalKing"
             type="text"
             placeholder="Goal King"
             onChange={handleChange}
           ></input>
           <h3> who would be the top assister </h3>
           <input
-            value={FormField.assistDemon}
-            name={assistDemon}
+            value={formField.assistDemon}
+            name="assistDemon"
             type="text"
             placeholder="assits demon"
             onChange={handleChange}
