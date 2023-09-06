@@ -31,6 +31,12 @@ function App() {
     });
   };
 
+  const handleSubmit=()=>{
+    const formData={...formField,{
+      name,star,goalKing,assistDemon
+    }}
+  }
+
   const drawTeams = () => {
     const pots = { ...data };
 

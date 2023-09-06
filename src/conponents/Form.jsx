@@ -1,5 +1,5 @@
 import React from "react";
-const FormField = ({ formField, handleChange }) => {
+const FormField = ({ formField, handleChange, handleSubmit }) => {
   return (
     <div>
       <form>
@@ -40,6 +40,8 @@ const FormField = ({ formField, handleChange }) => {
           ></input>
         </div>
       </form>
+      <button onSubmit={handleSubmit}>submit</button>
+      <div>{formField}</div>
     </div>
   );
 };
