@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Pots from "./conponents/Pots";
 import GroupDraws from "./conponents/Groups";
 import FormField from "./conponents/Form";
+import LiveDisPlay from "./conponents/LiveDisplay";
 import data from "./data";
 import "./App.css";
 
@@ -56,6 +57,7 @@ function App() {
     <>
       <Pots drawTeams={drawTeams} />
       <GroupDraws groups={groups} />
+      <LiveDisPlay />
     </>
   );
 }
