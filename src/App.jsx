@@ -31,11 +31,11 @@ function App() {
     });
   };
 
-  const handleSubmit=()=>{
-    const formData={...formField,{
-      name,star,goalKing,assistDemon
-    }}
-  }
+  //const handleSubmit=()=>{
+  // const formData={...formField,{
+  //   name,star,goalKing,assistDemon
+  //}}
+  //}
 
   const drawTeams = () => {
     const pots = { ...data };
@@ -56,7 +56,6 @@ function App() {
     <>
       <Pots drawTeams={drawTeams} />
       <GroupDraws groups={groups} />
-      <FormField handleChange={handleChange} formField={formField} />
     </>
   );
 }
