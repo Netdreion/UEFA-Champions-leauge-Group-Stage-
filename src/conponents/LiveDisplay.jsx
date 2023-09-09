@@ -1,22 +1,35 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
-const LiveDisPlay = () => {
-  const fetchData = async () => {
-    const url =
-      "https://www.thesportsdb.com/api/v1/json/3/searchevents.php?e=Arsenal_vs_Chelsea";
+const LiveDisplay = () => {
+  const [data, setData] = useState(null); // State to store the fetched data
 
-    try {
-      const responde = await fetch(url);
-      const data = await responde.json();
-      console.log(data);
-    } catch (error) {
-      console.log(error);
-    }
-    useEffect(() => {
-      fetchData();
-    }, []);
-    return <div className="Container"></div>;
-  };
+  useEffect(() => {
+    const fetchData = async () => {
+      const url =
+        "https://www.thesportsdb.com/api/v1/json/3/searchevents.php?e=Arsenal_vs_Chelsea";
+
+      try {
+        const response = await fetch(url);
+        const jsonData = await response.json();
+        setData(jsonData); // Store the fetched data in state
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fetchData(); // Call fetchData when the component mounts
+  }, []); // Empty dependency array to ensure the effect runs once
+
+  // Render the fetched data or a loading message
+  return (
+    <div className="Container">
+      {data ? (
+        <pre>{JSON.stringify(data, null, 2)}</pre>
+      ) : (
+        <p>Loading data...</p>
+      )}
+    </div>
+  );
 };
 
-export default LiveDisPlay;
+export default LiveDisplay;
