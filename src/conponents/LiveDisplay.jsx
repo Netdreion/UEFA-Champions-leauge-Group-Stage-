@@ -4,7 +4,7 @@ const LiveDisplay = () => {
   const [data, setData] = useState(null); // State to store the fetched data
 
   useEffect(() => {
-    const fetchData = async (category) => {
+    const fetchData = async () => {
       const url = `https://www.thesportsdb.com/api/v1/json/3/searchevents.php?e=${category}`;
 
       try {
@@ -27,7 +27,7 @@ const LiveDisplay = () => {
       ) : (
         <p>Loading data...</p>
       )}
-      <p>{category}</p>
+      <p></p>
     </div>
   );
 };
